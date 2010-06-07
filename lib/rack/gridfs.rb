@@ -11,7 +11,7 @@ module Rack
     
     def initialize(app, options = {})
       options = {
-        :hostname => 'localhost', 
+        :hostname => 'localhost',
         :prefix   => 'gridfs',
         :port     => Mongo::Connection::DEFAULT_PORT
       }.merge(options)
