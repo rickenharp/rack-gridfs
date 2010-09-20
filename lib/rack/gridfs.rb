@@ -38,7 +38,6 @@ module Rack
     end
 
     def gridfs_request(id)
-      #file = Mongo::Grid.new(db).get(BSON::ObjectID.from_string(id))
       grid = Mongo::GridFileSystem.new(db)
       file = grid.open(id, 'r')
       [200, {'Content-Type' => file.content_type}, [file.read]]
