@@ -10,10 +10,10 @@ begin
     gem.homepage          = "http://github.com/skinandbones/rack-gridfs"
     gem.authors           = ["Blake Carlson"]
     gem.rubyforge_project = "rack-gridfs"
-    
+
     gem.add_dependency('rack')
-    gem.add_dependency('mongo', '>= 1.0.1')
-    
+    gem.add_dependency('mongo', '>= 1.0.8')
+
     gem.add_development_dependency('mocha', '0.9.4')
     gem.add_development_dependency('rack-test')
     gem.add_development_dependency('shoulda')

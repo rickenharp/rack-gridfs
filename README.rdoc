@@ -17,8 +17,8 @@ This version is currently based off of mongo-0.20.1.
 
 As of mongo-0.19.1, there have been significant changes to GridFS.  I do
 not plan to support versions of the mongo driver prior to 0.19.  There are
-some compatibility issues with mongo-0.19 vs. mongo-0.20 (Mongo::ObjectID
-vs. BSON::ObjectID).  For now, I am choosing to support mongo-0.20.
+some compatibility issues with mongo-0.19 vs. mongo-0.20 (Mongo::ObjectId
+vs. BSON::ObjectId).  For now, I am choosing to support mongo-0.20.
 
 == Installation
 

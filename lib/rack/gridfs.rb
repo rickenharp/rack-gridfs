@@ -41,7 +41,7 @@ module Rack
       grid = Mongo::GridFileSystem.new(db)
       file = grid.open(id, 'r')
       [200, {'Content-Type' => file.content_type}, [file.read]]
-    rescue Mongo::GridError, BSON::InvalidObjectID
+    rescue Mongo::GridError, BSON::InvalidObjectId
       [404, {'Content-Type' => 'text/plain'}, ['File not found.']]
     rescue Mongo::GridFileNotFound
       [404, {'Content-Type' => 'text/plain'}, ['File not found.']]
