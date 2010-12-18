@@ -41,7 +41,7 @@ module Rack
       grid = Mongo::GridFileSystem.new(db)
       file = grid.open(id, 'r')
       if request.env['If-None-Match'] == file.files_id.to_s || request.env['If-Modified-Since'] == file.upload_date.httpdate
-        [304, {'Content-Type' => 'text/plain'}, ['Not modified']]
+        [304, {'Content-Type' => 'text/plain', 'Etag' => file.files_id.to_s}, ['Not modified']]
       else
         [200, {'Content-Type' => file.content_type, 'Last-Modified' => file.upload_date.httpdate, 'Etag' => file.files_id.to_s}, [file.read]]
       end
